@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link, useParams } from "react-router-dom"
+import { HashRouter as Router, Switch, Route, Link, useParams } from "react-router-dom"
 
 import './styles/App.scss';
 import logo from './images/logo.png'
@@ -13,19 +13,16 @@ import { featuredWithSlug } from './db/db';
 import ScrollToTop from './components/ScrollToTop';
 import CustomCursor from './CustomCursor/CustomCursor';
 
-import LocomotiveScroll from 'locomotive-scroll';
-import '../node_modules/locomotive-scroll/src/locomotive-scroll.scss'
-import UseLocoScroll from './Hooks/UseLocoScroll';
+
 
 
 function App() {
 
   const [preloader, setPreloader] = useState(true);
 
-  // UseLocoScroll(!preloader);
 
 
-  const [timer, setTimer] = useState(1);
+  const [timer, setTimer] = useState(2);
 
   const id = useRef(null);
 
