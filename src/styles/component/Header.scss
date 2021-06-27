@@ -34,7 +34,7 @@
 
             h4 {
                 font-size: $h1;
-                line-height: calc(var($h1)*1.07);
+                // line-height: calc(var($h1)*1.07);
                 letter-spacing: -3.5px;
                 font-family: $main-font;
                 color: $dark-grey;
@@ -64,14 +64,14 @@
             h1 {
 
                 font-size: $h1;
-                line-height: calc(var($h1)*1.07);
+                // line-height: calc(($h1)*1.07);
                 letter-spacing: -3.5px;
                 left: -0.98rem;
                 font-weight: 500;
 
                 .line {
                     display: block;
-                    height: calc(var($h1)*1.2);
+                    // height: calc(var($h1)*1.2);
                     // overflow: hidden;
 
 
