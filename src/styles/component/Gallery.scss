@@ -1,0 +1,146 @@
+@import 'media-queries.scss';
+@import 'variables.scss';
+
+
+.gallery-container {
+
+    padding: 80px 0;
+
+    padding-bottom: 30px;
+    // background-color: $offset-white;
+
+    .wrapper {
+        padding: 120px 0;
+        padding-top: 10px;
+        @extend %max-width;
+        position: relative;
+
+        .content {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 100px;
+            flex-wrap: wrap;
+
+
+            h2 {
+                font-size: $h2;
+                font-weight: 400;
+                line-height: calc(($h2)*1.1);
+                letter-spacing: -2px;
+                position: relative;
+                z-index: 1;
+                display: inline-flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .line {
+                    display: block;
+                    height: calc(($h2)*1.2);
+                    overflow: hidden;
+
+                    &:nth-child(2) {
+                        position: relative;
+                        left: 4rem;
+                    }
+                }
+            }
+
+        }
+
+
+        .works {
+
+            align-self: flex-start;
+            max-width: 60%;
+            padding: 20px;
+
+            @include tablet {
+                max-width: 100%;
+            }
+
+            &-desc {
+                font-size: 20px;
+                margin: 20px 0;
+            }
+
+            .title-wrapper {
+                // background: #fff;
+                position: relative;
+                z-index: 2;
+
+                a {
+                    text-decoration: none;
+                    color: $black;
+
+
+                    .project-items {
+                        padding: 40px 0;
+                        border-bottom: 1px solid #ddd;
+                        mix-blend-mode: difference !important;
+
+
+
+                        .list-content {
+                            margin: 10px 0;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+
+                            .project-title {
+                                font-size: 2.4vw;
+                                letter-spacing: 0.2px;
+                                font-weight: 400;
+                                margin-bottom: 10px;
+                                // color: #fff;
+                                color: black;
+                            }
+
+                            img {
+                                height: 25px;
+                                color: white;
+                            }
+                        }
+
+                        p {
+                            // color: #ddd;
+                            color: black;
+                            font-weight: 300;
+                            padding-left: 4px;
+                        }
+
+                    }
+
+                }
+            }
+
+            .project-media {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                img {
+                    opacity: 0;
+                    position: absolute;
+                    width: auto;
+                    height: auto;
+                    max-height: 30%;
+                    max-width: 40%;
+                    object-fit: contain;
+
+                    &.is-active {
+                        opacity: 1;
+
+
+                    }
+                }
+            }
+
+        }
+
+    }
+}

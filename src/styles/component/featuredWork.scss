@@ -1,0 +1,227 @@
+@import 'media-queries.scss';
+@import 'variables.scss';
+
+.featuredWorkContainer {
+    padding-bottom: 90px;
+    position: relative;
+    z-index: 4;
+
+    .wrapper {
+        @extend %max-width;
+
+        .hero {
+            padding-top: 100px;
+            padding-bottom: 20px;
+
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                height: 600px;
+                justify-content: center;
+                position: relative;
+
+                h4 {
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+
+                h1 {
+                    margin-top: 25px;
+                    font-size: $h1;
+                    font-weight: 500;
+                    letter-spacing: .5px;
+                    line-height: calc(var($h1)*1.07)
+                }
+
+                .thumb {
+                    position: absolute;
+                    height: 100%;
+                    width: 800px;
+
+                    right: 0;
+                    top: 0;
+                    z-index: -1;
+
+                    @include mobile {
+                        width: 100%;
+                        margin-top: 20px;
+
+                    }
+
+                    @include tablet {
+                        position: static;
+                    }
+
+
+                    .img-wrapper {
+                        height: 100%;
+                        position: relative;
+
+                        img {
+                            object-fit: cover;
+                            height: 100%;
+                            width: 100%;
+                            object-position: center center;
+
+                            transition: clip-path 1s cubic-bezier(0.77, 0, 0.1745, 1);
+
+                            @include sm-mobile {
+                                object-fit: contain;
+                            }
+                        }
+                    }
+
+                }
+
+
+
+
+            }
+
+            @include tablet {
+
+                margin-top: 10px;
+
+                .hero-content {
+                    width: 100%;
+                    height: 100%;
+
+                    flex-direction: column-reverse;
+
+                    h1 {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+
+        .intro {
+            margin-top: 80px;
+            padding-bottom: 80px;
+            border-bottom: 1px solid #ddd;
+
+            p {
+                font-size: 30px;
+                line-height: 1.28;
+
+
+            }
+
+            .project-info {
+                display: flex;
+                margin-top: 60px;
+
+
+
+                .info {
+                    flex-basis: 400px;
+
+                    h5 {
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #2f2f2f;
+                        margin-bottom: 14px;
+                    }
+
+                    a {
+                        font-size: 20px;
+                        color: $black;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+
+
+                }
+
+                @include tablet {
+                    flex-direction: column;
+
+                    .info {
+                        flex-basis: 0px;
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+
+        .main-section {
+            .section {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 100px;
+
+
+
+                .heading {
+                    flex-basis: 400px;
+
+                    h4 {
+                        font-size: 24px;
+                        font-weight: 500;
+                    }
+                }
+
+                .section-content {
+                    flex: 1 1;
+                    max-width: 800px;
+
+                    p {
+                        font-size: 22px;
+                        line-height: 1.6;
+                    }
+
+                    .thumb {
+                        position: relative;
+                        height: 100%;
+                        width: 800px;
+                        right: 0;
+                        top: 0;
+                        z-index: -1;
+
+                        @include mobile {
+                            width: 100%;
+                            margin-top: 20px;
+                        }
+
+                        .img-wrapper {
+                            height: 100%;
+                            position: relative;
+
+                            img {
+                                object-fit: contain;
+                                height: 100%;
+                                width: 100%;
+                                object-position: center center;
+                            }
+                        }
+
+                    }
+
+
+                }
+
+                @include tablet {
+                    flex-direction: column;
+
+                    .heading {
+                        width: 100%;
+                        flex-basis: 0;
+
+
+                    }
+
+
+
+                }
+            }
+        }
+
+    }
+
+}

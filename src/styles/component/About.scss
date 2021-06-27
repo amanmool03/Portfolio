@@ -1,0 +1,153 @@
+@import 'media-queries.scss';
+@import 'variables.scss';
+
+.about-container {
+    margin-top: 50px;
+    padding: 80px 0;
+    z-index: 4;
+    position: relative;
+
+    .wrapper {
+        padding: 120px 0;
+        @extend %max-width;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        &::before {
+            content: 'Smth About me';
+            left: 30%;
+            transform: translateX(-50%);
+            top: 0%;
+            @extend %bgfont;
+        }
+
+        .content {
+            margin-right: 20px;
+            margin-left: 250px;
+            padding: 40px;
+            position: relative;
+
+            @include tablet {
+                margin: 0;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 200px;
+                width: 200px;
+                background: url('https://scontent.fktm6-1.fna.fbcdn.net/v/t1.15752-9/202737250_926532294564601_2884110562171580078_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_ohc=JQQfiL8L63cAX_c9B3V&_nc_ht=scontent.fktm6-1.fna&oh=e48770d0c1df6d548892c92c3ffa2ffc&oe=60D77D80');
+                background-position: center;
+                background-size: cover;
+                left: -220px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @include tablet {
+                    display: block;
+                    position: relative;
+                    left: 50%;
+                    top: -10%;
+                    transform: translateX(-50%);
+                }
+
+
+            }
+
+
+            h1 {
+                font-size: 100px;
+                font-weight: 500;
+                line-height: 100px;
+
+                @include tablet {
+                    font-size: 80px;
+                    line-height: normal;
+                }
+
+                .line {
+                    display: block;
+
+
+                    // &:nth-child(1) {
+                    //     position: relative;
+                    //     left: 100px;
+
+                    //     &::before {
+                    //         content: '';
+                    //         position: absolute;
+                    //         height: 100px;
+                    //         width: 100px;
+                    //         background: url('https://scontent.fktm6-1.fna.fbcdn.net/v/t1.15752-9/201173772_199597095386473_7411836016543529183_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=ae9488&_nc_ohc=zK2QK7GVxSUAX9P2H19&_nc_ht=scontent.fktm6-1.fna&oh=a40bf06024f0ae81dfd9bffde17ecb90&oe=60D660D4');
+                    //         background-position: center;
+                    //         background-size: cover;
+                    //         left: -120px;
+                    //         top: -12px;
+
+
+                    //     }
+                    // }
+                }
+
+
+            }
+
+            .links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 20px;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        color: $black;
+                        font-size: 18px;
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            height: 10px;
+                            width: 10px;
+                            background: url('https://image.flaticon.com/icons/png/512/271/271226.png');
+                            background-position: center;
+                            background-size: contain;
+                            position: absolute;
+                            left: -30%;
+                            top: 50%;
+                            transform: translateY(-50%) rotate(-45deg);
+                            transition: 0.1s ease-in;
+
+
+
+                        }
+
+
+                        &:hover {
+                            &::before {
+                                transform: translateY(-50%) rotate(0deg);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+
+        p {
+            padding: 30px;
+
+        }
+
+    }
+}
